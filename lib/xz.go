@@ -18,18 +18,18 @@ func (x XZCompression) DecompressReader(in io.Reader) (io.ReadCloser, error) {
 	return NewXZReaderWithCloser(fastxz.NewReader(in, 0)), nil
 }
 
-// XZReaderWithCloser is a wrapper because original zstd.Decoder is not
+// XZReaderWithCloser is a wrapper because original fastxz.Reader is not
 // implementing io.ReadCloser correctly (does not return error).
 type XZReaderWithCloser struct {
 	r *fastxz.Reader
 }
 
-// Read wraps zstd.Decoder Read.
+// Read wraps fastxz.Reader Read.
 func (zr XZReaderWithCloser) Read(b []byte) (int, error) {
 	return zr.r.Read(b)
 }
 
-// Close just wraps zstd.Decoder Close, but return nil as error.
+// Close just wraps fastxz.Reader Close, but return nil as error.
 func (zr XZReaderWithCloser) Close() error {
 	// zr.r.Close()
 	return nil
