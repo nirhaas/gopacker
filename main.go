@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	usageString       = "USAGE: packer <executable_path>"
+	usageString       = "USAGE: gopacker <executable_path>"
 	packedExt         = ".packed"
 	footerMagicString = "LALALALA"
 )
