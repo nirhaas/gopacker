@@ -10,7 +10,7 @@ gopacker <executable_to_pack>
 ## How does it work
 
 ### Packing
-* Copy `gopacker` executalbe itself to output file.
+* Copy `gopacker` executable itself to output file.
 * Compress and stream (append) to output file.
 * Append compressed size.
 * Append magic string.
