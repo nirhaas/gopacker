@@ -1,4 +1,4 @@
-module github.com/nirhaas/gopacker
+module gopacker
 
 go 1.12
 

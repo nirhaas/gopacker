@@ -11,7 +11,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/nirhaas/gopacker/lib"
+	"gopacker/lib"
 
 	"github.com/pkg/errors"
 )
